@@ -74,10 +74,21 @@
 
 
         function initHeadline() {
-            //insert <i> element for each letter of a changing word
             singleLetters($('.cd-headline.letters').find('b'));
-            //initialise headline animation
+            adjustWrapperWidth(); // Adicionando esta função
             animateHeadline($('.cd-headline'));
+        }
+
+        // Define largura do wrapper com base no maior texto
+        function adjustWrapperWidth() {
+            $('.cd-words-wrapper').each(function () {
+                let maxWidth = 0;
+                $(this).find('b').each(function () {
+                    let wordWidth = $(this).outerWidth(true);
+                    if (wordWidth > maxWidth) maxWidth = wordWidth;
+                });
+                $(this).css('width', maxWidth + 'px');
+            });
         }
 
         function singleLetters($words) {
@@ -202,11 +213,11 @@
         function takePrev($word) {
             return (!$word.is(':first-child')) ? $word.prev() : $word.parent().children().last();
         }
-
         function switchWord($oldWord, $newWord) {
-            $oldWord.removeClass('is-visible').addClass('is-hidden');
-            $newWord.removeClass('is-hidden').addClass('is-visible');
+            $oldWord.removeClass('is-visible').addClass('is-hidden').css('display', 'none');
+            $newWord.removeClass('is-hidden').addClass('is-visible').css('display', 'inline-block');
         }
+
     });
 
 

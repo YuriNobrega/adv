@@ -1557,18 +1557,20 @@ video {
 .cd-words-wrapper {
     display: inline-block;
     position: relative;
-    text-align: left;
+    white-space: nowrap;
+    /* Evita quebra de linha */
 }
 
 .cd-words-wrapper b {
-    display: inline-block;
+    display: none;
     position: absolute;
-    white-space: nowrap;
     left: 0;
     top: 0;
 }
 
 .cd-words-wrapper b.is-visible {
+    display: inline-block;
+    /* Apenas o visível aparece */
     position: relative;
 }
 
