@@ -33,17 +33,23 @@
     <!-- Hero Section Start -->
 
     <div class="hero">
+        <!-- Vídeo de fundo -->
+        <video id="hero-video" autoplay muted playsinline loop>
+            <source src="vidadv.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+
+
         <div id="particles-js"></div>
+
+
         <div class="container-fluid">
             <div class="hero-item">
-                <div class="hero-img"> <img src="img/ex2.png" alt="Hero">
-                </div>
                 <div class="hero-text cd-intro">
                     <h1 class="cd-headline rotate-1"><span>Advogado Especialista em</span>
                         <span class="cd-words-wrapper"><b class="is-visible">Direito Previdenciário</b>
                             <b>Planejamento Previdenciário</b>
                             <b>Consultoria para Benefícios do INSS</b>
-                            <b>Consultoria especializada</b>
                         </span>
                     </h1>
                     <p>
@@ -58,8 +64,6 @@
         </div>
     </div>
     <!-- Hero Section End -->
-
-
 
 
     <!-- Fact Start -->
@@ -435,41 +439,89 @@
 
     <!-- JavaScript Libraries -->
 
+
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("hero-video");
+
+            // Tenta reproduzir automaticamente (bypass bloqueios de autoplay)
+            video.play().catch(error => console.error("Erro ao tentar reproduzir o vídeo:", error));
+
+            // Animação de troca de palavras na headline
+            const words = document.querySelectorAll(".cd-words-wrapper b");
+            let currentIndex = 0;
+
+            function switchWord() {
+                words[currentIndex].classList.remove("is-visible");
+                currentIndex = (currentIndex + 1) % words.length;
+                words[currentIndex].classList.add("is-visible");
+            }
+
+            setInterval(switchWord, 3000); // Troca a palavra a cada 3 segundos
+        });</script>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        const icons = [
-            "/img/icon-7.png",
-            "/img/icon-4.png",
-            "/img/icon-6.png"
-        ];
-
-        // Função para sortear um ícone aleatório
-        function getRandomIcon() {
-            return icons[Math.floor(Math.random() * icons.length)];
-        }
-
         particlesJS("particles-js", {
             particles: {
-                number: { value: 50 },
-                shape: {
-                    type: "image",
-                    image: {
-                        src: getRandomIcon(), // Sorteia um ícone para cada partícula
-                        width: 50,
-                        height: 50
+                number: {
+                    value: 50, // Número de partículas (ajuste conforme necessário)
+                    density: {
+                        enable: true,
+                        value_area: 800
                     }
                 },
-                size: { value: 30, random: true },
-                move: { speed: 2, direction: "none", out_mode: "out" },
-                opacity: { value: 0.4, random: true }
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle", // Partículas redondas para um efeito mais sutil
+                },
+                opacity: {
+                    value: 0.4, // Deixa mais suave
+                    random: true,
+                    anim: {
+                        enable: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false
+                    }
+                },
+                line_linked: {
+                    enable: true, // Habilita as linhas
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.2, // Opacidade baixa para não poluir a tela
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1, // Movimento lento e suave
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
             },
             interactivity: {
-                events: { onhover: { enable: true, mode: "repulse" } }
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab" // Quando o mouse passa, as linhas conectam suavemente
+                    },
+                    onclick: {
+                        enable: false
+                    },
+                    resize: true
+                }
             },
             retina_detect: true
         });
-
-
 
     </script>
 

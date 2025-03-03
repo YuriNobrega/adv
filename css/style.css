@@ -266,7 +266,7 @@ a:focus {
 .hero {
     position: relative;
     width: 100%;
-    height: calc(100vh - 35px);
+    height: 100vh;
     min-height: 400px;
     background-color: #1d2434;
     opacity: 0.9;
@@ -275,6 +275,17 @@ a:focus {
     /* Evita que os elementos animados saiam da área */
 }
 
+
+/* Vídeo de fundo */
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
 
 
 @keyframes moveBackground {
@@ -298,15 +309,11 @@ a:focus {
 }
 
 
-.hero * {
-    position: relative;
-    z-index: 1;
-}
-
 
 
 .hero .container-fluid {
     padding: 0;
+    justify-content: flex-start;
 }
 
 .hero .hero-item {
