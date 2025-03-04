@@ -795,6 +795,7 @@ html {
 }
 
 .especialista-text ul li::before {
+
     color: #f5a623;
     /* Amarelo INSS */
     margin-right: 10px;
@@ -941,18 +942,76 @@ html {
     text-align: center;
     padding: 100px 0;
     overflow: hidden;
+    background: linear-gradient(120deg, #0c326f 50%, #1a4b8e 100%);
 }
 
-/* Fundo azul com mesclagem */
+/* Fundo com textura de quebra-cabeça */
 .storytelling-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, #0c326f 50%, #1a4b8e 100%);
+    background-image: url("../img/autismo-pattern.jpg");
+    /* Adicione um padrão de quebra-cabeça */
+    background-size: contain;
+    opacity: 0.1;
+    /* Suave para não interferir no conteúdo */
     z-index: 0;
 }
+
+/* Peças de quebra-cabeça animadas */
+.storytelling::before,
+.storytelling::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-image: url('../img/puzzle-piece.png');
+    /* Peça de quebra-cabeça */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    animation: float 8s infinite alternate ease-in-out;
+}
+
+.storytelling::before {
+    top: 10%;
+    left: 8%;
+    transform: rotate(-10deg);
+}
+
+.storytelling::after {
+    bottom: 15%;
+    right: 12%;
+    transform: rotate(15deg);
+}
+
+/* Animação de flutuação para as peças */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(20px) rotate(10deg);
+    }
+}
+
+/* Imagem principal com efeito de profundidade */
+.story-img img {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Efeito de "flutuação" na imagem */
+.story-img img:hover {
+    transform: translateY(-10px);
+}
+
 
 /* Estilização da imagem principal */
 .story-img img {
