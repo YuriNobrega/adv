@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Advogado Tributário</title>
+    <title>Advogado Previdenciário</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Consulting Website Template Free Download" name="keywords">
     <meta content="Consulting Website Template Free Download" name="description">
@@ -20,8 +20,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="/lib/animate/animate.min.css" rel="stylesheet">
     <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 
     <!-- Template Stylesheet -->
@@ -31,300 +32,216 @@
 <body>
 
     <!-- Hero Section Start -->
+    <div class="hero-container">
+        <div class="hero-text" data-aos="zoom-in">
+            <h1 class="hero-title" data-aos="fade-up">VOCÊ PODE ESTAR PERDENDO UM DIREITO QUE MUDA VIDAS!</h1>
+            <p class="hero-subtitle" data-aos="fade-up">VOCÊ, SEU FILHO OU ALGUM FAMILIAR TEM ALGUMA DESSAS CONDIÇÕES?
+            </p>
 
-    <div class="hero">
-        <!-- Vídeo de fundo -->
-        <video id="hero-video" autoplay muted playsinline loop>
-            <source src="vidadv.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos.
-        </video>
-
-
-        <div id="particles-js"></div>
-
-
-        <div class="container-fluid">
-            <div class="hero-item">
-                <div class="hero-text cd-intro">
-                    <h1 class="cd-headline rotate-1"><span>Advogado Especialista em</span>
-                        <span class="cd-words-wrapper"><b class="is-visible">Direito Previdenciário</b>
-                            <b>Planejamento Previdenciário</b>
-                            <b>Consultoria para Benefícios do INSS</b>
-                        </span>
-                    </h1>
-                    <p>
-                        Garanta seus direitos previdenciários, conquiste sua aposentadoria e evite problemas com o
-                        INSS.
-                    </p>
-                    <div class="hero-btn">
-                        <a class="btn" href=""><i class="fa fa-link"></i>Agende uma consulta</a>
-                    </div>
-                </div>
+            <div class="hero-conditions">
+                <p data-aos="fade-up" data-aos-delay="200">Epilepsia | TDAH | Autismo | Síndrome de Down | Hidrocefalia
+                    |
+                    Paralisia Cerebral | Deficiência Auditiva e Surdez | Cardiopatia Congênita</p>
             </div>
+        </div>
+
+        <!-- Vídeo abaixo do texto -->
+        <div class="video-container" data-aos="flip-up">
+            <video id="hero-video" autoplay playsinline loop>
+                <source src="videoplayback.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+
+        <!-- Botão abaixo do vídeo -->
+        <div class="hero-btn">
+            <a class="btn" href="#form" data-aos="fade-up" data-aos-delay="400">NÃO DEIXE SEU DIREITO PARA TRÁS!</a>
+        </div>
+
+        <!-- Saiba mais e seta animada -->
+        <div class="scroll-down" onclick="scrollToNextSection()">
+            <p>Saiba mais</p>
+            <div class="arrow-down"></div>
+        </div>
+
+        <!-- Bloco de informação extra -->
+        <div class="info-box" data-aos="fade-up" data-aos-delay="500">
+            <p><strong>Se sim, saiba que o <span class="highlight">governo</span> pode te ajudar com um benefício de até
+                    <span class="highlight">um salário mínimo mensal</span> sem precisar ter contribuído para o
+                    INSS!</strong></p>
+            <p>Mas tem um detalhe: milhares de pessoas <span class="highlight-yellow">não sabem desse direito</span> e
+                estão perdendo dinheiro todos os meses!</p>
+            <h2 class="info-title">NÃO DEIXE SEU DIREITO PARA TRÁS!</h2>
+            <p>O <span class="highlight">BPC/LOAS</span> é um benefício garantido por lei para idosos e pessoas com
+                deficiência que não têm condições de se manter sozinhas.</p>
+            <p>Infelizmente, muitas pessoas têm seus pedidos negados ou <span class="highlight-yellow">demoram
+                    anos</span> para conseguir o benefício porque não sabem como fazer da forma correta.</p>
+            <h3 class="info-subtitle">Aqui entra a nossa equipe!</h3>
+            <p>Somos especialistas em <span class="highlight">BPC/LOAS</span> e já ajudamos milhares de pessoas a
+                conquistarem seus direitos!</p>
+            <p><span class="highlight">Está demorando para receber seu pedido?</span></p>
+            <p>Já teve seu benefício negado? <span class="highlight-green">Podemos te ajudar a resolver isso agora
+                    mesmo!</span></p>
         </div>
     </div>
     <!-- Hero Section End -->
 
 
-    <!-- Fact Start -->
-    <div class="fact">
+
+
+    <!-- Fact Section Start -->
+    <div class="fact-container">
+        <h2 class="fact-title">QUEM TEM DIREITO AO <span class="highlight">BPC/LOAS?</span></h2>
+        <div class="fact-row">
+            <div class="fact-card" data-aos="fade-up">
+                <img src="img/elderly.png" alt="Ícone Idoso">
+                <p><strong>Idosos com 65 anos ou mais</strong></p>
+            </div>
+            <div class="fact-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="img/pcd.png" alt="Ícone Deficiência">
+                <p><strong>Pessoas com deficiência de qualquer idade</strong> (física, mental, intelectual ou sensorial)
+                </p>
+            </div>
+            <div class="fact-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="img/renda.png" alt="Ícone Renda">
+                <p><strong>Renda familiar de até R$ 353 por pessoa</strong></p>
+            </div>
+            <div class="fact-card" data-aos="fade-up" data-aos-delay="600">
+                <img src="img/cadunico.png" alt="Ícone Cadastro">
+                <p><strong>Cadastro no CadÚnico</strong> (podemos te ajudar com isso também!)</p>
+            </div>
+        </div>
+
+        <div class="hero-btn">
+            <a class="btn" href="#form" data-aos="fade-up" data-aos-delay="400">NÃO PERCA TEMPO! INICIE SEU ATENDIMENTO
+                AGORA MESMO!</a>
+        </div>
+    </div>
+    <!-- Fact Section End -->
+
+
+
+    <!-- Especialista Section Start -->
+    <div class="especialista">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="fact-item">
-                        <img src="img/icon-4.png" alt="Icon">
-                        <h2>Aposentadoria</h2>
+                <div class="col-lg-6">
+                    <div class="especialista-text">
+                        <h2>Fale com um especialista e tenha uma resposta rápida sobre o seu caso.</h2>
+                        <ul>
+                            <li>🔹 Atendimento online ou presencial</li>
+                            <li>🔹 Equipe de especialistas em LOAS/BPC</li>
+                            <li>🔹 Mais de 7 anos de experiência</li>
+                            <li>🔹 Analisamos seu caso sem compromisso</li>
+                        </ul>
+                        <a class="btn btn-contato" href="#contato">Entre em contato</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="fact-item">
-                        <img src="img/icon-1.png" alt="Icon">
-                        <h2>Benefícios por Incapacidade</h2>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="fact-item">
-                        <img src="img/icon-8.png" alt="Icon">
-                        <h2>LOAS/BPC</h2>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="fact-item">
-                        <img src="img/icon-6.png" alt="Icon">
-                        <h2>Revisão de Benefícios</h2>
+                <div class="col-lg-6">
+                    <div class="especialista-img">
+                        <img src="img/senior.jpg" alt="Advogado atendendo cliente">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Fact Start -->
+    <!-- Especialista Section End -->
 
 
-    <!-- About Start -->
-    <div class="about">
+    <!-- Assessoria Section Start -->
+    <div class="assessoria">
+        <div class="container">
+            <div class="section-header">
+                <h2>POR QUE ESCOLHER NOSSA ASSESSORIA?</h2>
+            </div>
+            <div class="assessoria-content">
+                <p>Muitos tentam dar entrada no benefício sozinhos e acabam sendo negados. Outros esperam anos para
+                    receber. Nossa equipe especializada sabe exatamente o que fazer para acelerar o processo e garantir
+                    que você tenha o benefício que merece o mais rápido possível!</p>
+
+                <div class="assessoria-benefits">
+                    <div class="benefit-item" data-aos="fade-up">
+                        <img src="img/case.png" alt="Experiência">
+                        <p><strong>Experiência comprovada:</strong> Mais de 7 anos ajudando pessoas a garantirem seus
+                            direitos.</p>
+                    </div>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                        <img src="img/support.png" alt="Atendimento">
+                        <p><strong>Atendimento humanizado:</strong> Cada caso é único e tratamos com o cuidado que
+                            você merece.</p>
+                    </div>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                        <img src="img/rocket.png" alt="Agilidade">
+                        <p><strong>Agilidade:</strong> Evite erros que podem atrasar ou cancelar seu benefício.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Assessoria Section End -->
+
+
+    <!-- Storytelling Section -->
+    <div class="storytelling">
+        <!-- Fundo Azul + PNG Mesclado -->
+        <div class="storytelling-background"></div>
+
         <div class="container">
             <div class="row align-items-center">
+                <!-- Imagem ilustrativa -->
+                <div class="col-lg-6">
+                    <div class="story-img">
+                        <img src="img/mom-son.png" alt="Dona Maria e Gabriel">
+                    </div>
+                </div>
+
+                <!-- Texto da história -->
                 <div class="col-md-6">
-                    <div class="about-img">
-                        <div class="about-img-1">
-                            <img src="img/items-judges2.jpg" alt="Image">
-                        </div>
-                        <div class="about-img-2">
-                            <img src="img/carousel-3.jpg" alt="Image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="section-header">
-                        <p>Sobre o Advogado</p>
-                        <h2>25 Anos de experiência</h2>
-                    </div>
-                    <div class="about-text">
-                        <p>
-                            Com ampla experiência em Direito Previdenciário, já ajudei dezenas de clientes a
-                            garantirem
-                            seus benefícios do INSS, desde aposentadorias até revisões de cálculos e concessão de
-                            auxílios. Meu compromisso é fornecer um atendimento personalizado e eficiente,
-                            garantindo
-                            que você receba o que realmente tem direito.
-
-
+                    <div class="story-content">
+                        <h2 class="story-title">A HISTÓRIA DA DONA MARIA</h2>
+                        <p class="story-text">
+                            Dona Maria, mãe solo, lutava para cuidar do filho de 7 anos, diagnosticado com autismo.
+                            Durante anos, ela gastou o que não tinha com tratamentos, sem saber que tinha direito a um
+                            benefício do governo.
+                            Quando finalmente soube, tentou dar entrada no INSS, mas teve o pedido negado por falta de
+                            documentos corretos.
                         </p>
-                        <a class="btn" href="">Entre em contato</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Service Start -->
-    <div class="service">
-        <div class="container">
-            <div class="section-header">
-                <p>Serviços</p>
-                <h2>Soluções jurídicas para garantir seus direitos</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-item">
-                        <img src="img/icon-1.png" alt="Icon">
-                        <h3>Consultoria Tributária</h3>
-                        <p>
-                            Assessoria especializada para otimização fiscal e conformidade legal.
+                        <p class="story-text highlight">
+                            Foi quando ela nos encontrou.
                         </p>
-                        <a href="">Saiba mais</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-item">
-                        <img src="img/icon-2.png" alt="Icon">
-                        <h3>Planejamento Fiscal</h3>
-                        <p>
-                            Estratégias eficazes para redução da carga tributária de forma legal e segura.
+                        <p class="story-text">
+                            Nossa equipe analisou o caso, reuniu todas as provas necessárias e, em menos de 4 meses,
+                            Dona Maria começou a receber o BPC para seu filho!
+                            Hoje, ela pode proporcionar um tratamento adequado e uma vida digna ao pequeno Gabriel.
                         </p>
-                        <a href="">Saiba mais</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-item">
-                        <img src="img/icon-3.png" alt="Icon">
-                        <h3>Defesa e Contencioso Tributário</h3>
-                        <p>
-                            Representação em processos administrativos e judiciais contra autuações indevidas.
-                        </p>
-                        <a href="">Saiba mais</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-item">
-                        <img src="img/icon-4.png" alt="Icon">
-                        <h3>Recuperação de Créditos Tributários</h3>
-                        <p>
-                            Identificação de tributos pagos a mais e solicitação de restituições.
-
-                        </p>
-                        <a href="">Saiba mais</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- Feature Start -->
-    <div class="feature">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="col-md-6">
-                    <div class="feature-img">
-                        <img src="img/business-man.png" alt="Image">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="section-header">
-                        <p>Sobre mim</p>
-                        <h2>Por que me escolher?</h2>
-                    </div>
-                    <p>
-                        Atendimento especializado e comprometido com o seu futuro
-                    </p>
-                    <div class="row counters">
-                        <div class="col-6">
-                            <i class="fa fa-user"></i>
-                            <div class="counters-text">
-                                <h2 data-toggle="counter-up">100</h2>
-                                <p> Atendimento humanizado e personalizado</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <i class="fa fa-users"></i>
-                            <div class="counters-text">
-                                <h2 data-toggle="counter-up">100</h2>
-                                <p>Análise detalhada do seu caso e melhores estratégias</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <i class="fa fa-check"></i>
-                            <div class="counters-text">
-                                <h2 data-toggle="counter-up">300</h2>
-                                <p>Atuação rápida para agilizar seu benefício</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <i class="fa fa-running"></i>
-                            <div class="counters-text">
-                                <h2 data-toggle="counter-up">400</h2>
-                                <p>Acompanhamento completo até a liberação do seu direito</p>
-                            </div>
+                        <div class="cta">
+                            <p class="cta-text">E VOCÊ? Vai deixar seu direito passar?</p>
+                            <a href="#" class="cta-btn">Descubra agora</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Feature End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="testimonial">
-        <div class="container">
-            <div class="section-header">
-                <p>Testemunhas</p>
-                <h2>O que os clientes estão falando</h2>
-            </div>
-            <div class="owl-carousel testimonials-carousel">
-                <div class="testimonial-item">
-                    <img src="img/testimonial-1.jpg" alt="Image">
-                    <p>
-                        "Graças ao atendimento atencioso e ágil, consegui minha aposentadoria sem dores de cabeça.
-                        Recomendo!"
-                    </p>
-                    <h2>João M.</h2>
-                    <h3>Empresário</h3>
-                </div>
-                <div class="testimonial-item">
-                    <img src="img/testimonial-2.jpg" alt="Image">
-                    <p>
-                        "Fui muito bem orientado, e meu benefício saiu mais rápido do que eu imaginava!"
-                    </p>
-                    <h2>Vitor C.</h2>
-                    <h3>Microempreendedor</h3>
-                </div>
-                <div class="testimonial-item">
-                    <img src="img/testimonial-3.jpg" alt="Image">
-                    <p>
-                        "Eu já tinha tentado sozinho e tive meu pedido negado. Aqui, consegui resolver tudo e agora
-                        recebo meu benefício sem problemas."
-                    </p>
-                    <h2>Carlos L.</h2>
-                    <h3>Contador</h3>
-                </div>
-                <div class="testimonial-item">
-                    <img src="img/testimonial-4.jpg" alt="Image">
-                    <p>
-                        "Eu não entendia nada sobre tributos, mas fui orientada com paciência e profissionalismo.
-                        Agora,
-                        pago menos impostos de forma legal!"
-                    </p>
-                    <h2>Fernando S.</h2>
-                    <h3>Médico</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
-
-    <!-- Contact Start -->
+    <!-- Contato Start -->
     <div class="contact">
         <div class="container">
             <div class="section-header">
-                <p>Contato</p>
-                <h2>Precisa de assessoria jurídica tributária?</h2>
+                <h2>FALE COM UM ESPECIALISTA HOJE MESMO!</h2>
+                <p>Seu direito pode estar sendo ignorado! Entre em contato agora e descubra se você tem direito ao
+                    BPC/LOAS.</p>
             </div>
             <div class="row align-items-center">
                 <div class="col-md-5">
                     <div class="contact-info">
                         <div class="contact-icon">
-                            <i class="fa fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Escritório</h3>
-                            <p>123 Street, New York, USA</p>
-                        </div>
-                    </div>
-                    <div class="contact-info">
-                        <div class="contact-icon">
                             <i class="fa fa-phone-alt"></i>
                         </div>
                         <div class="contact-text">
-                            <h3>Entre em contato</h3>
-                            <p>+012 345 6789</p>
+                            <h3>Atendimento Imediato</h3>
+                            <p>WhatsApp: <strong>(XX) XXXX-XXXX</strong></p>
                         </div>
                     </div>
                     <div class="contact-info">
@@ -333,36 +250,38 @@
                         </div>
                         <div class="contact-text">
                             <h3>E-mail</h3>
-                            <p>info@example.com</p>
+                            <p>contato@seusite.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Atendimento Presencial</h3>
+                            <p>Endereço do Escritório</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-7">
                     <div class="contact-form">
-                        <div id="success"></div>
+                        <h3 class="form-title">Receba uma análise gratuita do seu caso</h3>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="control-group">
-                                <input type="text" class="form-control" id="name" placeholder="Seu nome"
-                                    required="required" data-validation-required-message="Insire seu nome" />
-                                <p class="help-block text-danger"></p>
+                                <input type="text" class="form-control" id="name" placeholder="Seu nome completo"
+                                    required="required" />
                             </div>
                             <div class="control-group">
-                                <input type="email" class="form-control" id="email" placeholder="Seu e-mail"
-                                    required="required" data-validation-required-message="Please enter your email" />
-                                <p class="help-block text-danger"></p>
+                                <input type="tel" class="form-control" id="phone" placeholder="Seu telefone ou WhatsApp"
+                                    required="required" />
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control" id="subject" placeholder="Titulo"
-                                    required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control" id="message" placeholder="Mensagem" required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
+                                <textarea class="form-control" id="message"
+                                    placeholder="Descreva sua situação brevemente" required="required"></textarea>
                             </div>
                             <div>
-                                <button class="btn" type="submit" id="sendMessageButton">Enviar mensagem</button>
+                                <button class="btn btn-enviar" type="submit" id="sendMessageButton">Quero minha análise
+                                    gratuita</button>
                             </div>
                         </form>
                     </div>
@@ -370,7 +289,7 @@
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+    <!-- Contato End -->
 
 
 
@@ -425,10 +344,9 @@
         <div class="container copyright">
             <div class="row">
                 <div class="col-md-6">
-                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                    <p>&copy; <a href="#">Advogado Previdenciário</a>, All Right Reserved.</p>
                 </div>
                 <div class="col-md-6">
-                    <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
                 </div>
             </div>
         </div>
@@ -439,91 +357,22 @@
 
     <!-- JavaScript Libraries -->
 
-
-    <script>document.addEventListener("DOMContentLoaded", function () {
-            const video = document.getElementById("hero-video");
-
-            // Tenta reproduzir automaticamente (bypass bloqueios de autoplay)
-            video.play().catch(error => console.error("Erro ao tentar reproduzir o vídeo:", error));
-
-            // Animação de troca de palavras na headline
-            const words = document.querySelectorAll(".cd-words-wrapper b");
-            let currentIndex = 0;
-
-            function switchWord() {
-                words[currentIndex].classList.remove("is-visible");
-                currentIndex = (currentIndex + 1) % words.length;
-                words[currentIndex].classList.add("is-visible");
-            }
-
-            setInterval(switchWord, 3000); // Troca a palavra a cada 3 segundos
-        });</script>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: {
-                    value: 50, // Número de partículas (ajuste conforme necessário)
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: "#ffffff"
-                },
-                shape: {
-                    type: "circle", // Partículas redondas para um efeito mais sutil
-                },
-                opacity: {
-                    value: 0.4, // Deixa mais suave
-                    random: true,
-                    anim: {
-                        enable: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: false
-                    }
-                },
-                line_linked: {
-                    enable: true, // Habilita as linhas
-                    distance: 150,
-                    color: "#ffffff",
-                    opacity: 0.2, // Opacidade baixa para não poluir a tela
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 1, // Movimento lento e suave
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: "grab" // Quando o mouse passa, as linhas conectam suavemente
-                    },
-                    onclick: {
-                        enable: false
-                    },
-                    resize: true
-                }
-            },
-            retina_detect: true
+        AOS.init({
+            duration: 800, // Tempo da animação (ms)
+            easing: "ease-out", // Suavização
+            once: true // Animação só acontece uma vez
         });
 
+
+        function scrollToNextSection() {
+            const nextSection = document.querySelector(".info-box");
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
     </script>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

@@ -3,7 +3,10 @@
 /*******************************/
 body {
     color: #797979;
-    background: #ffffff;
+    background: #f5f5f5;
+    /* Cinza claro, neutro e sofisticado */
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+    /* Textura leve */
     font-family: 'Lato', sans-serif;
 }
 
@@ -16,6 +19,21 @@ h6 {
     color: #092a49;
     font-family: 'Oswald', sans-serif;
 }
+
+h1,
+h2,
+h3 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Scales font size responsively */
+    margin-bottom: 20px;
+}
+
+
+p {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    line-height: 1.8;
+}
+
 
 a {
     color: #454545;
@@ -36,7 +54,9 @@ a:focus {
 }
 
 .container-fluid {
-    max-width: 1366px;
+    max-width: 95vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .back-to-top {
@@ -71,6 +91,43 @@ a:focus {
     .mt-125 {
         margin-top: 125px;
     }
+}
+
+/* Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Scrollbar fina */
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    /* Cor do fundo do track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0c326f;
+    /* Cor azul-escura do scroll */
+    border-radius: 3px;
+    /* Deixa mais arredondado */
+    transition: background 0.3s ease-in-out, height 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #09234f;
+    /* Cor mais escura ao passar o mouse */
+    height: 50px;
+    /* Efeito sutil de alongamento */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #0c326f #f5f5f5;
+}
+
+/* Animação de rolagem suave */
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -263,145 +320,89 @@ a:focus {
 /*******************************/
 /********** hero CSS ***********/
 /*******************************/
-.hero {
+
+/* Contêiner principal */
+.hero-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     position: relative;
+    min-height: 100vh;
+    padding: 5rem 10vw;
     width: 100%;
-    height: 100vh;
-    min-height: 400px;
-    background-color: #1d2434;
-    opacity: 0.9;
-    margin-bottom: 45px;
-    overflow: hidden;
-    /* Evita que os elementos animados saiam da área */
-}
-
-
-/* Vídeo de fundo */
-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
-
-
-@keyframes moveBackground {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    100% {
-        transform: translate(-50px, -50px);
-    }
-}
-
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    /* Mantém no fundo, mas visível */
-}
-
-
-
-
-.hero .container-fluid {
-    padding: 0;
-    justify-content: flex-start;
-}
-
-.hero .hero-item {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 35px);
+    /* Faz a seção ocupar toda a altura da tela */
     display: flex;
-    align-items: center;
-    text-align: left;
-    justify-content: flex-start;
     flex-direction: column;
-    gap: 20px;
-}
-
-.hero .hero-img {
-    position: absolute;
-    /* Para ocupar o espaço total */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Ocupa 100% da altura do .hero */
-    text-align: center;
-    overflow: hidden;
-    /* Evita transbordamento */
-    z-index: 1;
-    /* Fica atrás do texto */
-}
-
-
-.hero .hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    /* Faz a imagem cobrir toda a área sem distorção */
-}
-
-.hero .hero-text {
-    flex: 1;
-    position: absolute;
-    max-width: 50%;
-    text-align: right;
-    height: calc(100vh - 35px);
-    display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    z-index: 2;
-}
-
-.hero .hero-text h1 {
+    /* Centraliza verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
     text-align: center;
-    color: #ffffff;
-    font-size: 60px;
-    font-weight: 200;
-    margin-bottom: 20px;
+    background: white;
+    /* Cor de fundo para garantir contraste */
 }
 
-.hero .hero-text p {
-    color: #ffffff;
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 25px;
+/* Título e subtítulo */
+.hero-title {
+    font-size: 3rem;
+    /* Maior para dar mais impacto */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #0c326f;
+    /* Vermelho para chamar atenção */
 }
 
-.hero .hero-text .btn {
-    padding: 15px 30px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: #ffffff;
-    background: none;
-    border: 2px solid #ffffff;
-    border-radius: 0;
-    transition: .3s;
+.hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.hero .hero-text .btn i {
-    margin-right: 5px;
+/* Lista de condições */
+.hero-conditions p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0c326f;
 }
 
-.hero .hero-text .btn:hover {
-    color: #0796fe;
-    background: #ffffff;
+/* Vídeo responsivo */
+.video-container {
+    width: 100%;
+    max-width: 1000px;
+    /* Maior destaque para o vídeo */
+    margin: 30px auto;
 }
 
-.hero .hero-btn .btn:first-child {
-    margin-right: 15px;
+#hero-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Borda arredondada opcional */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra mais forte */
+}
+
+/* Botão */
+.hero-btn {
+    margin-top: 30px;
+}
+
+.hero-btn .btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 1.3rem;
+    /* Maior destaque */
+    background-color: #f5a623;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn .btn:hover {
+    background-color: #d48820;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -462,8 +463,143 @@ video {
 
 
 /*******************************/
+/****** SAIBA MAIS (SETA) ******/
+/*******************************/
+
+.scroll-down {
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.scroll-down p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0c326f;
+    /* Azul INSS */
+    margin-bottom: 5px;
+}
+
+.arrow-down {
+    width: 30px;
+    height: 30px;
+    border-left: 4px solid #0c326f;
+    border-bottom: 4px solid #0c326f;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+    animation: bounce 1.5s infinite;
+    margin-bottom: 13rem;
+}
+
+/* Animação da seta */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    50% {
+        transform: translateY(10px) rotate(-45deg);
+    }
+}
+
+/*******************************/
+/******* INFO BOX ESTILO *******/
+/*******************************/
+
+.info-box {
+    background: #f4f4f4;
+    border-left: 8px solid #0c326f;
+    /* Azul INSS */
+    padding: 25px;
+    max-width: 800px;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.info-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Títulos dentro da Info Box */
+.info-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0c326f;
+    text-transform: uppercase;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.info-subtitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #007a33;
+    /* Verde do INSS */
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+/* Destaques nas cores do INSS */
+.highlight {
+    font-weight: bold;
+    color: #0c326f;
+    /* Azul INSS */
+}
+
+.highlight-yellow {
+    font-weight: bold;
+    color: #f5a623;
+    /* Amarelo INSS */
+}
+
+.highlight-green {
+    font-weight: bold;
+    color: #007a33;
+    /* Verde INSS */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .info-box {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .info-title {
+        font-size: 1.5rem;
+    }
+
+    .info-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .info-box p {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/*******************************/
 /******* Section Header ********/
 /*******************************/
+.section {
+    min-height: 100vh;
+    /* Makes sections fill the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+
 .section-header {
     position: relative;
     text-align: left;
@@ -520,282 +656,410 @@ video {
 /*******************************/
 /********** Fact CSS ***********/
 /*******************************/
-.fact {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
+/*******************************/
+/******* FACT SECTION **********/
+/*******************************/
 
-.fact .fact-item {
-    position: relative;
-    width: 100%;
-    margin-bottom: 30px;
-    padding: 30px 0 25px 0;
+.fact-container {
     text-align: center;
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+.fact-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0c326f;
+    /* Azul INSS */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.fact-title .highlight {
+    color: #f5a623;
+    /* Amarelo INSS */
+}
+
+.fact-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fact-card {
     background: #ffffff;
-    border: 1px solid transparent;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
-    transition: .3s;
+    border: 2px solid #0c326f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.fact .fact-item:hover {
-    border-color: rgba(0, 0, 0, .1);
-    box-shadow: none;
+/* Efeito de Hover */
+.fact-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    border-color: #f5a623;
+    /* Muda para a cor amarela do INSS */
 }
 
-.fact .fact-item img {
-    max-height: 50px;
+/* Efeito no texto ao passar o mouse */
+.fact-card:hover p {
+    color: #0c326f;
+}
+
+
+
+.fact-card img {
+    width: 60px;
+    height: auto;
     margin-bottom: 15px;
 }
 
-.fact .fact-item h2 {
-    font-size: 22px;
-    font-weight: 300;
-    letter-spacing: 1px;
+.fact-card p {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .fact-row {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/*******************************/
-/********** About CSS **********/
-/*******************************/
-.about {
-    position: relative;
-    width: 100%;
-    padding: 45px 0;
-}
-
-.about .section-header {
-    margin-bottom: 30px;
-    margin-left: 0;
-}
-
-.about .about-img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.about .about-img::after {
-    position: absolute;
-    content: "";
-    top: 60px;
-    right: 60px;
-    bottom: 60px;
-    left: 60px;
-    background: transparent;
-    border: 30px solid;
-    border-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) .5%, rgba(0, 0, 0, .1) .5%, rgba(0, 0, 0, .1) 1%) 30;
-    z-index: 1;
-}
-
-.about .about-img:hover::after {
-    border-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) .5%, rgba(0, 0, 0, .05) .5%, rgba(0, 0, 0, .05) 1%) 30;
-}
-
-.about .about-img-1 {
-    position: relative;
-    height: 100%;
-    height: 100%;
-    margin: 0 150px 150px 0;
-}
-
-.about .about-img-2 {
-    position: absolute;
-    height: 100%;
-    height: 100%;
-    top: 150px;
-    left: 150px;
-    z-index: 1;
-}
-
-.about .about-img-1 img,
-.about .about-img-2 img {
-    position: relative;
-    width: 100%;
-}
-
-.about .about-text p {
-    font-size: 16px;
-}
-
-.about .about-text a.btn {
-    position: relative;
-    margin-top: 15px;
-    padding: 12px 25px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #092a49;
-    border: 2px solid #092a49;
-    border-radius: 0;
-    background: none;
-    transition: .3s;
-}
-
-.about .about-text a.btn:hover {
-    color: #0796fe;
-    background: #092a49;
-}
-
-@media (max-width: 767.98px) {
-    .about .about-img {
-        margin-bottom: 30px;
-        height: auto;
+    .fact-card {
+        width: 90%;
     }
 }
 
 
+.fact-card,
+.benefit-item {
+    width: 280px;
+    /* Makes cards larger */
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fact-row,
+.assessoria-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
 /*******************************/
-/********* Service CSS *********/
+/****** Especialista CSS *******/
 /*******************************/
-.service {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
+.especialista {
+    background: #f4f4f4;
+    padding: 10rem 10rem;
 }
 
-.service .service-item {
-    position: relative;
-    width: 100%;
-    margin-bottom: 30px;
-    padding: 30px;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, .1);
-    transition: .3s;
+.especialista .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.service .service-item:hover {
-    border-color: transparent;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+.especialista-text {
+    max-width: 550px;
 }
 
-.service .service-item img {
-    max-height: 50px;
+.especialista-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0c326f;
+    /* Azul INSS */
     margin-bottom: 20px;
 }
 
-.service .service-item h3 {
+.especialista-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.especialista-text ul li {
+    font-size: 1.2rem;
+    color: #333;
     margin-bottom: 10px;
-    font-size: 22px;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-.service .service-item p {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.service .service-item a {
-    position: relative;
-    font-size: 16px;
-    color: #0796fe;
-    transition: .3s;
-}
-
-.service .service-item a::after {
-    content: "";
-    position: absolute;
-    width: 80%;
-    height: 2px;
-    bottom: -3px;
-    left: 10%;
-    background: #0796fe;
-}
-
-.service .service-item:hover a.btn {
-    color: #092a49;
-    background: #1d2434;
-    border-color: #1d2434;
-}
-
-
-/*******************************/
-/********* Feature CSS *********/
-/*******************************/
-.feature {
-    position: relative;
-    width: 100%;
-    padding: 45px 0;
-}
-
-.feature .col-md-6 {
-    height: 100%;
-}
-
-.feature .feature-img {
-    position: relative;
-    width: 100%;
-    height: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
 }
 
-.feature .feature-img::after {
-    position: absolute;
-    content: "";
+.especialista-text ul li::before {
+    color: #f5a623;
+    /* Amarelo INSS */
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.btn-contato {
+    display: inline-block;
+    background: #0c326f;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-contato:hover {
+    background: #f5a623;
+    color: #0c326f;
+}
+
+.especialista-img {
+    text-align: center;
+    max-width: 500px;
+}
+
+.especialista-img img {
     width: 100%;
-    height: 70%;
-    top: 30%;
-    left: 0;
-    border: 30px solid;
-    border-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) .5%, rgba(0, 0, 0, .1) .5%, rgba(0, 0, 0, .1) 1%) 30;
-    z-index: 1;
+    max-width: 450px;
+
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
 }
 
-.feature .feature-img:hover::after {
-    border-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) .5%, rgba(0, 0, 0, .05) .5%, rgba(0, 0, 0, .05) 1%) 30;
+.especialista-img img:hover {
+    transform: scale(1.05);
 }
 
-.feature .feature-img img {
-    position: relative;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 30px 30px 30px;
-    z-index: 2;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .especialista .row {
+        flex-direction: column;
+        text-align: center;
+    }
 
-@media (max-width: 767.98px) {
-    .feature .feature-img {
-        margin-bottom: 45px;
+    .especialista-text {
+        max-width: 100%;
+    }
+
+    .especialista-img img {
+        max-width: 100%;
+        margin-top: 20px;
     }
 }
 
-.feature .counters .col-6 {
-    padding-top: 25px;
+
+/*******************************/
+/******* ASSESSORIA CSS ********/
+/*******************************/
+.assessoria {
+    background: #f4f4f4;
+    padding: 10rem 10rem;
+    text-align: center;
+}
+
+.assessoria .section-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0c326f;
+    /* Azul INSS */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.assessoria-content p {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.assessoria-benefits {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.feature .counters i {
-    padding: 5px 15px 0 0;
-    font-size: 28px;
-    color: #0796fe;
+.benefit-item {
+    background: #fff;
+    border: 2px solid #0c326f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.feature .counters h2 {
+.benefit-item img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.benefit-item p {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    border-color: #f5a623;
+    /* Amarelo INSS */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .assessoria-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-item {
+        width: 90%;
+    }
+}
+
+
+/* Storytelling Section */
+.storytelling {
     position: relative;
-    display: inline-block;
-    color: #0796fe;
-    font-size: 30px;
-    font-weight: 300;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    overflow: hidden;
 }
 
-.feature .counters h2::after {
+/* Fundo azul com mesclagem */
+.storytelling-background {
     position: absolute;
-    content: "+";
-    top: -15px;
-    right: -15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #0c326f 50%, #1a4b8e 100%);
+    z-index: 0;
 }
 
-.feature .counters p {
-    color: #092a49;
-    font-size: 20px;
-    margin: 0;
+/* Estilização da imagem principal */
+.story-img img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
 }
+
+/* Texto principal */
+.story-content {
+    text-align: left;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Título */
+/* Estilizando o título */
+.story-title {
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffdd57, #ffa500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Melhorando os textos */
+.story-text {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Aumentando o destaque na frase principal */
+.story-text.highlight {
+    font-weight: bold;
+    font-size: 26px;
+    color: #ffdd57;
+    text-align: center;
+    margin: 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Efeito de brilho no destaque */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffdd57;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #ffdd57, 0 0 30px #ffa500;
+    }
+}
+
+/* Melhorando o Call to Action */
+.cta-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: yellow;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Botão com efeito pulsante */
+.cta-btn {
+    display: inline-block;
+    background: green;
+    color: white;
+    padding: 16px 35px;
+    font-size: 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+}
+
+.cta-btn:hover {
+    background: #09234f;
+    transform: scale(1.08);
+}
+
 
 
 /*******************************/
@@ -874,135 +1138,6 @@ video {
     height: 160px;
 }
 
-
-/*******************************/
-/******* Testimonial CSS *******/
-/*******************************/
-.testimonial {
-    position: relative;
-    width: 100%;
-    padding: 45px 0;
-}
-
-.testimonial .testimonials-carousel {
-    position: relative;
-    width: calc(100% + 30px);
-    margin: 0 -15px;
-}
-
-.testimonial .testimonial-item {
-    position: relative;
-    width: 100%;
-    padding: 0 15px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.testimonial .testimonial-item img {
-    position: relative;
-    width: 80px;
-    border-radius: 80px;
-    margin-bottom: 15px;
-}
-
-.testimonial .testimonial-item p {
-    margin-bottom: 15px;
-}
-
-.testimonial .testimonial-item h2 {
-    position: relative;
-    color: #092a49;
-    font-size: 16px;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    padding-bottom: 3px;
-}
-
-.testimonial .testimonial-item h2::before {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: #0796fe;
-    transition: .3s;
-}
-
-.testimonial .testimonial-item:hover h2::before {
-    width: 60px;
-}
-
-.testimonial .testimonial-item h3 {
-    color: #999999;
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-.testimonial .owl-nav {
-    position: relative;
-    width: 100%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.testimonial .owl-nav .owl-prev,
-.testimonial .owl-nav .owl-next {
-    position: relative;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #0796fe;
-    font-size: 25px;
-    transition: .3s;
-}
-
-.testimonial .owl-nav .owl-prev {
-    padding-right: 80px;
-}
-
-.testimonial .owl-nav .owl-next {
-    padding-left: 80px;
-}
-
-.testimonial .owl-nav .owl-prev:hover,
-.testimonial .owl-nav .owl-next:hover {
-    color: #092a49;
-}
-
-.testimonial .owl-nav .owl-prev::after,
-.testimonial .owl-nav .owl-next::after {
-    position: absolute;
-    content: "";
-    width: 80px;
-    height: 3px;
-    top: 11px;
-    background: #0796fe;
-    transition: .3s;
-}
-
-.testimonial .owl-nav .owl-prev::after {
-    left: 9px;
-}
-
-.testimonial .owl-nav .owl-next::after {
-    right: 9px;
-}
-
-.testimonial .owl-nav .owl-prev:hover::after {
-    background: #092a49;
-}
-
-.testimonial .owl-nav .owl-next:hover::after {
-    background: #092a49;
-}
 
 
 /*******************************/
@@ -1199,111 +1334,136 @@ video {
 
 
 /*******************************/
-/********* Contact CSS *********/
+/******* CONTATO CSS ***********/
 /*******************************/
 .contact {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
+    background: white;
+    /* Azul INSS */
+    color: white;
+    padding: 70px 0;
+    text-align: center;
 }
 
-.contact .contact-info {
-    position: relative;
+.contact .section-header {
+    margin-bottom: 40px;
+}
+
+.contact .section-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f5a623;
+    /* Amarelo INSS */
+}
+
+.contact .section-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Estilização dos blocos de contato */
+.contact-info {
     display: flex;
-    padding: 30px;
-    border: 1px solid rgba(0, 0, 0, .1);
-    margin-bottom: 30px;
-    transition: .3s;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.contact .contact-info:hover {
-    border-color: transparent;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+.contact-info:hover {
+    transform: scale(1.05);
 }
 
-.contact .contact-icon {
-    position: relative;
-    width: 50px;
-    height: 50px;
+.contact-icon {
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    background: #f5a623;
+    /* Amarelo INSS */
+    color: #0c326f;
+    font-size: 24px;
+    margin-right: 15px;
 }
 
-.contact .contact-icon i {
-    font-size: 18px;
-    color: #0796fe;
-}
-
-.contact .contact-text {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-left: 15px;
-}
-
-.contact .contact-text h3 {
-    font-size: 16px;
-    font-weight: 400;
-    color: #092a49;
-    letter-spacing: 1px;
-}
-
-.contact .contact-text p {
+.contact-text h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
     margin: 0;
-    font-size: 16px;
 }
 
-.contact .contact-form {
-    position: relative;
+.contact-text p {
+    font-size: 1.1rem;
+    margin: 5px 0 0;
+}
+
+/* Formulário */
+.contact-form {
+    background: white;
     padding: 30px;
-    border: 1px solid rgba(0, 0, 0, .1);
-    margin-bottom: 30px;
-    transition: .3s;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.contact .contact-form:hover {
-    border-color: transparent;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0c326f;
+    margin-bottom: 20px;
 }
 
-.contact .contact-form input {
+/* Campos de entrada */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
     padding: 15px;
-    background: none;
-    border-radius: 0;
-    border: 1px solid rgba(0, 0, 0, .1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
 }
 
-.contact .contact-form textarea {
-    height: 100px;
-    padding: 8px 15px;
-    background: none;
-    border-radius: 0;
-    border: 1px solid rgba(0, 0, 0, .1);
+/* Botão de envio */
+.btn-enviar {
+    display: block;
+    width: 100%;
+    background: #f5a623;
+    /* Amarelo INSS */
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
-.contact .contact-form .btn {
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #092a49;
-    background: none;
-    border: 2px solid #092a49;
-    border-radius: 0;
-    transition: .3s;
+.btn-enviar:hover {
+    background: #ffa500;
 }
 
-.contact .contact-form .btn:hover {
-    color: #0796fe;
-    background: #092a49;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact .row {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.contact .help-block ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon {
+        margin-bottom: 10px;
+    }
 }
 
 
