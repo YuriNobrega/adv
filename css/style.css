@@ -960,32 +960,69 @@ html {
     z-index: 0;
 }
 
-/* Peças de quebra-cabeça animadas */
+/* 🔹 Várias peças de quebra-cabeça espalhadas 🔹 */
 .storytelling::before,
-.storytelling::after {
+.storytelling::after,
+.storytelling .puzzle-1,
+.storytelling .puzzle-2,
+.storytelling .puzzle-3,
+.storytelling .puzzle-4,
+.storytelling .puzzle-5 {
     content: "";
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     background-image: url('../img/puzzle-piece.png');
-    /* Peça de quebra-cabeça */
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.15;
-    animation: float 8s infinite alternate ease-in-out;
+    animation: float 6s infinite alternate ease-in-out;
 }
 
+/* Peças posicionadas estrategicamente */
 .storytelling::before {
-    top: 10%;
-    left: 8%;
-    transform: rotate(-10deg);
+    top: 8%;
+    left: 5%;
+    transform: rotate(-15deg);
 }
 
 .storytelling::after {
-    bottom: 15%;
-    right: 12%;
-    transform: rotate(15deg);
+    bottom: 10%;
+    right: 8%;
+    transform: rotate(20deg);
 }
+
+.storytelling .puzzle-1 {
+    top: 15%;
+    right: 15%;
+    animation-duration: 6s;
+}
+
+.storytelling .puzzle-2 {
+    bottom: 20%;
+    left: 10%;
+    animation-duration: 7s;
+}
+
+.storytelling .puzzle-3 {
+    top: 40%;
+    left: 25%;
+    animation-duration: 8s;
+}
+
+.storytelling .puzzle-4 {
+    bottom: 35%;
+    right: 20%;
+    animation-duration: 9s;
+}
+
+.storytelling .puzzle-5 {
+    top: 60%;
+    right: 30%;
+    animation-duration: 10s;
+}
+
+
 
 /* Animação de flutuação para as peças */
 @keyframes float {
@@ -994,17 +1031,19 @@ html {
     }
 
     100% {
-        transform: translateY(20px) rotate(10deg);
+        transform: translateY(20px) rotate(15deg);
     }
 }
 
-/* Imagem principal com efeito de profundidade */
+/* Imagem principal */
 .story-img img {
     width: 100%;
     max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 2;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Efeito de "flutuação" na imagem */
