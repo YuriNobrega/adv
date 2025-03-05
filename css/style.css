@@ -390,7 +390,7 @@ html {
 
 /* Título e subtítulo */
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.2rem;
     /* Maior para dar mais impacto */
     font-weight: bold;
     text-transform: uppercase;
@@ -400,14 +400,14 @@ html {
 }
 
 .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 /* Lista de condições */
 .hero-conditions p {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: bold;
     color: #0c326f;
 }
