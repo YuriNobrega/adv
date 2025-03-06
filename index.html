@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Advogado Previdenciário</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta content="Consulting Website Template Free Download" name="keywords">
     <meta content="Consulting Website Template Free Download" name="description">
 
@@ -38,14 +38,29 @@
         <img src="img/logo loas sem fundo.png" alt="LOAS Logo" class="hero-logo">
 
         <div class="hero-text" data-aos="zoom-in">
-            <h1 class="hero-title" data-aos="fade-up">VOCÊ PODE ESTAR PERDENDO UM DIREITO QUE MUDA VIDAS!</h1>
-            <p class="hero-subtitle" data-aos="fade-up">VOCÊ, SEU FILHO OU ALGUM FAMILIAR TEM ALGUMA DESSAS CONDIÇÕES?
-            </p>
+            <div class="title-wrapper">
+                <h1 class="hero-title">
+                    <span class="gradient-text">VOCÊ PODE ESTAR PERDENDO</span>
+                    <span class="rotating-word">UM DIREITO<span class="exclamation">!</span></span>
+                </h1>
+            </div>
 
-            <div class="hero-conditions">
-                <p data-aos="fade-up" data-aos-delay="200">Epilepsia | TDAH | Autismo | Síndrome de Down | Hidrocefalia
-                    |
-                    Paralisia Cerebral | Deficiência Auditiva e Surdez | Cardiopatia Congênita</p>
+            <h2 class="hero-subtitle mobile-toggle" onclick="toggleConditions()">
+                <span class="toggle-text">VOCÊ, SEU FILHO OU ALGUM FAMILIAR TEM ALGUMA DESSAS CONDIÇÕES? </span>
+                <span class="toggle-icon">+</span>
+            </h2>
+
+            <div class="hero-conditions mobile-conditions">
+                <p data-aos="fade-up" data-aos-delay="200">
+                    <span class="condition">Epilepsia</span>
+                    <span class="condition">TDAH</span>
+                    <span class="condition">Autismo</span>
+                    <span class="condition">Síndrome de Down</span>
+                    <span class="condition">Hidrocefalia</span>
+                    <span class="condition">Paralisia Cerebral</span>
+                    <span class="condition">Deficiência Auditiva e Surdez</span>
+                    <span class="condition">Cardiopatia Congênita</span>
+                </p>
             </div>
         </div>
 
@@ -83,9 +98,15 @@
             <h3 class="info-subtitle">Aqui entra a nossa equipe!</h3>
             <p>Somos especialistas em <span class="highlight">BPC/LOAS</span> e já ajudamos milhares de pessoas a
                 conquistarem seus direitos!</p>
-            <p><span class="highlight">Está demorando para receber seu pedido?</span></p>
-            <p>Já teve seu benefício negado? <span class="highlight-green">Podemos te ajudar a resolver isso agora
-                    mesmo!</span></p>
+            <p>
+            <h2 class="info-title">Está demorando para receber seu pedido?</h2>
+            </p>
+            <p>
+            <h2 class="info-title">Já teve seu benefício negado?</h2>
+            <div class="hero-btn"><a class="btn" href="#form" data-aos="fade-up" data-aos-delay="400">Podemos
+                    te ajudar a resolver isso agora
+                    mesmo!</a></div>
+            </p>
         </div>
     </div>
     <!-- Hero Section End -->
@@ -310,98 +331,140 @@
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7">
+                <div class="container copyright">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="footer-contact">
-                                <h2>Our Head Office</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-                                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                                <p><i class="fa fa-envelope"></i>info@example.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
+                            <p>&copy; <a href="#">Auxílio LOAS</a>, All Rights Reserved.</p>
                         </div>
                         <div class="col-md-6">
-                            <div class="footer-link">
-                                <h2>Quick Links</h2>
-                                <a href="">Terms of use</a>
-                                <a href="">Privacy policy</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="footer-newsletter">
-                        <h2>Newsletter</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu
-                            placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
-                        </p>
-                        <div class="form">
-                            <input class="form-control" placeholder="Email goes here">
-                            <button class="btn">Submit</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container copyright">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; <a href="#">Advogado Previdenciário</a>, All Right Reserved.</p>
-                </div>
-                <div class="col-md-6">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+            <!-- Footer End -->
 
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-    <!-- JavaScript Libraries -->
+            <!-- JavaScript Libraries -->
 
-    <script>
-        AOS.init({
-            duration: 800, // Tempo da animação (ms)
-            easing: "ease-out", // Suavização
-            once: true // Animação só acontece uma vez
-        });
+            <style>
+                .mobile-toggle {
+                    cursor: pointer;
+                    position: relative;
+                    padding-right: 25px;
+                    display: inline-block;
+                }
+
+                .toggle-icon {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-weight: bold;
+                    transition: transform 0.3s ease;
+                }
+
+                .mobile-conditions {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease-out;
+                }
+
+                .mobile-conditions.show-conditions {
+                    max-height: 500px;
+                }
+
+                @media (min-width: 769px) {
+                    .mobile-toggle {
+                        cursor: default;
+                    }
+
+                    .toggle-icon {
+                        display: none;
+                    }
+
+                    .mobile-conditions {
+                        max-height: none !important;
+                    }
+                }
+            </style>
+
+            <script>
+                AOS.init({
+                    duration: 800, // Tempo da animação (ms)
+                    easing: "ease-out", // Suavização
+                    once: true // Animação só acontece uma vez
+                });
+
+                function toggleConditions() {
+                    if (window.innerWidth < 769) {
+                        const conditions = document.querySelector('.mobile-conditions');
+                        const icon = document.querySelector('.toggle-icon');
+                        conditions.classList.toggle('show-conditions');
+                        icon.textContent = conditions.classList.contains('show-conditions') ? '-' : '+';
+                    }
+                }
+
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth >= 769) {
+                        const conditions = document.querySelector('.mobile-conditions');
+                        conditions.classList.add('show-conditions');
+                    }
+                });
+
+                function toggleConditions() {
+                    if (window.innerWidth < 769) {
+                        const conditions = document.querySelector('.mobile-conditions');
+                        const icon = document.querySelector('.toggle-icon');
+                        conditions.classList.toggle('show-conditions');
+                        icon.textContent = conditions.classList.contains('show-conditions') ? '-' : '+';
+                    }
+                }
+
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth >= 769) {
+                        const conditions = document.querySelector('.mobile-conditions');
+                        conditions.classList.add('show-conditions');
+                    }
+                });
 
 
-        function scrollToNextSection() {
-            const nextSection = document.querySelector(".info-box");
-            if (nextSection) {
-                nextSection.scrollIntoView({ behavior: "smooth" });
-            }
-        }
+                function scrollToNextSection() {
+                    const nextSection = document.querySelector(".info-box");
+                    if (nextSection) {
+                        nextSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                }
 
-    </script>
+                // Animações customizadas
+                document.querySelectorAll('.word').forEach((word, index) => {
+                    word.style.animationDelay = `${index * 0.5}s`;
+                });
+
+                // Efeito de rotação na palavra
+                const rotatingWord = document.querySelector('.rotating-word');
+                setInterval(() => {
+                    rotatingWord.style.transform = `rotate(${Math.sin(Date.now() / 1000) * 2}deg)`;
+                }, 50);
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="/lib/easing/easing.min.js"></script>
-    <script type="module" src="/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script type="module" src="/lib/waypoints/waypoints.min.js"></script>
-    <script type="module" src="/lib/counterup/counterup.min.js"></script>
+            </script>
 
 
-    <!-- Contact Javascript File -->
-    <script src="/mail/jqBootstrapValidation.min.js"></script>
-    <script type="module" src="/mail/contact.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+            <script type="module" src="/lib/easing/easing.min.js"></script>
+            <script type="module" src="/lib/owlcarousel/owl.carousel.min.js"></script>
+            <script type="module" src="/lib/waypoints/waypoints.min.js"></script>
+            <script type="module" src="/lib/counterup/counterup.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script type="module" src="/js/main.js"></script>
+
+            <!-- Contact Javascript File -->
+            <script src="/mail/jqBootstrapValidation.min.js"></script>
+            <script type="module" src="/mail/contact.js"></script>
+
+            <!-- Template Javascript -->
+            <script type="module" src="/js/main.js"></script>
 
 
 </body>
