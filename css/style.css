@@ -393,7 +393,7 @@ html {
 }
 
 .hero-subtitle {
-    font-size: 1.6rem !important;
+    font-size: 1.4rem !important;
     border-right: 3px solid #fff;
     white-space: nowrap;
     overflow: hidden;
@@ -556,8 +556,7 @@ html {
 /* Vídeo responsivo */
 .video-container {
     width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
+    max-width: 1200px;
     position: relative;
     z-index: 1;
 }
@@ -565,10 +564,13 @@ html {
 #hero-video {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    /* Borda arredondada opcional */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-    /* Sombra mais forte */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+#hero-video:hover {
+    transform: scale(1.02);
 }
 
 /* Botão */
@@ -3494,20 +3496,8 @@ textarea.form-control {
 /* ========== RESPONSIVIDADE ========== */
 @media (max-width: 992px) {
     .hero-title {
-        font-size: 2.8rem !important;
+        font-size: 1.8rem !important;
         line-height: 1.2;
-    }
-
-    .hero-subtitle {
-        font-size: 1.8rem !important;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 1.8rem !important;
-        margin-bottom: 10px !important;
     }
 
     .hero-subtitle {
@@ -3515,11 +3505,23 @@ textarea.form-control {
     }
 }
 
+/* Mobile */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem !important;
+    }
+}
+
 @media (max-width: 768px) {
 
     /* Tablet Pequeno */
     .hero-title {
-        font-size: 2.2rem !important;
+        font-size: 1.3rem !important;
     }
 
     .hero-subtitle .word {
@@ -3580,7 +3582,7 @@ textarea.form-control {
     .video-container {
         width: 80%;
         /* Tablet */
-        width: 95%;
+        width: 120%;
         /* Celular */
     }
 
@@ -3616,7 +3618,7 @@ textarea.form-control {
     }
 
     .hero-title {
-        font-size: 1.5rem !important;
+        font-size: 0.8rem !important;
     }
 
     .video-container {
@@ -3644,6 +3646,141 @@ textarea.form-control {
 /* Landscape */
 @media (max-height: 500px) {
     /* Otimização vertical */
+}
+
+/* NOVOS CARDS COMPARATIVOS */
+.comparativo-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.card-comparativo {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    min-height: 320px;
+    transition: transform 0.3s ease;
+}
+
+.card-comparativo:hover {
+    transform: translateY(-5px);
+}
+
+/* Card negativo (SEM ASSESSORIA) */
+.card-negativo {
+    border: 3px solid #ff4444;
+}
+
+.card-negativo::before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ff4444;
+    font-size: 28px;
+    animation: pulseRed 2s infinite;
+}
+
+/* Card positivo (COM ASSESSORIA) */
+.card-positivo {
+    border: 3px solid #00C851;
+}
+
+.card-positivo::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #00C851;
+    font-size: 28px;
+    animation: pulseGreen 2s infinite;
+}
+
+.card-comparativo h3 {
+    font-size: 1.8rem;
+    color: var(--gov-blue);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.lista-comparativa {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-comparativa li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.card-negativo .lista-comparativa li::before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #ff4444;
+}
+
+.card-positivo .lista-comparativa li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #00C851;
+}
+
+@keyframes pulseRed {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulseGreen {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .comparativo-cards {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .card-comparativo {
+        min-height: auto;
+        padding: 25px;
+    }
 }
 
 .mobile-toggle {
@@ -3834,5 +3971,26 @@ textarea.form-control {
 
     .whatsapp-float i {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+
+        top: 0;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        max-width: 150px;
+        margin: 20px auto;
+        display: block;
+        right: auto;
+    }
+
+    .hero-title {
+        margin-top: 80px !important;
+    }
+
+    .hero-container {
+        padding-top: 2rem !important;
     }
 }
