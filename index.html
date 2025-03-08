@@ -20,6 +20,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="/lib/animate/animate.min.css" rel="stylesheet">
     <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
     <!-- AOS Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -74,14 +77,61 @@
 
         <!-- Botão abaixo do vídeo -->
         <div class="hero-btn">
-            <a class="btn" href="https://b24-vu7k2r.bitrix24.site/crm_form/" data-aos="fade-up" data-aos-delay="400">NÃO
-                DEIXE SEU DIREITO PARA TRÁS!</a>
+            <a class="btn" href="https://b24-vu7k2r.bitrix24.site/crm_form/" data-aos="fade-up"
+                data-aos-delay="400">RESOLVA SEU PROBLEMA AGORA</a>
         </div>
 
         <!-- Saiba mais e seta animada -->
         <div class="scroll-down" onclick="scrollToNextSection()">
             <p>Saiba mais</p>
             <div class="arrow-down"></div>
+        </div>
+
+
+        <!-- Novo Carrossel de Condições -->
+        <div class="conditions-carousel-container" data-aos="fade-up" data-aos-delay="300">
+            <div class="owl-carousel conditions-carousel">
+                <div class="condition-card">
+                    <div class="card-content">
+                        <span class="highlight">Epilepsia</span>
+                    </div>
+                </div>
+                <div class="condition-card">
+                    <div class="card-content">
+                        <span class="highlight">TDAH</span>
+                    </div>
+                </div>
+                <div class="condition-card">
+                    <div class="card-content">
+                        <span class="highlight">Autismo</span>
+                    </div>
+                </div>
+                <div class="condition-card">
+                    <div class="card-content">
+                        <span class="highlight">Síndrome de Down</span>
+                    </div>
+                </div>
+                <div class="condition-card">
+                    <div class="card-content">
+                        <span class="highlight">Hidrocefalia</span>
+                    </div>
+                </div>
+                <div class="condition-card">
+                    <div class="card-content">
+                        <span class="highlight">Paralisia Cerebral</span>
+                    </div>
+                </div>
+                <div class="condition-card">
+                    <div class="card-content">
+                        <span class="highlight">Deficiência Auditiva e Surdez</span>
+                    </div>
+                </div>
+                <div class="condition-card">
+                    <div class="card-content">
+                        <span class="highlight">Cardiopatia Congênita</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Bloco de informação extra -->
@@ -94,19 +144,22 @@
         </div>
         <div class="info-box" data-aos="fade-up" data-aos-delay="500">
             <h2 class="info-title">NÃO DEIXE SEU DIREITO PARA TRÁS!</h2>
+        </div>
+        <div class="info-box" data-aos="fade-up" data-aos-delay="500">
             <p>O <span class="highlight">BPC/LOAS</span> é um benefício garantido por lei para idosos e pessoas com
                 deficiência que não têm condições de se manter sozinhas.</p>
             <p>Infelizmente, muitas pessoas têm seus pedidos negados ou <span class="highlight-yellow">demoram
                     anos</span> para conseguir o benefício porque não sabem como fazer da forma correta.</p>
         </div>
         <div class="info-box" data-aos="fade-up" data-aos-delay="500">
+            <h2 class="info-title">Está demorando para receber seu pedido?</h2>
+        </div>
+        <div class="info-box" data-aos="fade-up" data-aos-delay="500">
             <h3 class="info-subtitle">Aqui entra a nossa equipe!</h3>
             <p>Somos especialistas em <span class="highlight">BPC/LOAS</span> e já ajudamos milhares de pessoas a
                 conquistarem seus direitos!</p>
         </div>
-        <div class="info-box" data-aos="fade-up" data-aos-delay="500">
-            <h2 class="info-title">Está demorando para receber seu pedido?</h2>
-        </div>
+
         <div class="info-box" data-aos="fade-up" data-aos-delay="500">
             <h2 class="info-title">Já teve seu benefício negado?</h2>
         </div>
@@ -168,7 +221,8 @@
                             <li>🔹 Mais de 7 anos de experiência</li>
                             <li>🔹 Analisamos seu caso sem compromisso</li>
                         </ul>
-                        <a class="btn btn-contato" href="#contato">Entre em contato</a>
+                        <a class="btn btn-contato" href="https://b24-vu7k2r.bitrix24.site/crm_form/">Entre em
+                            contato</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -469,6 +523,26 @@
                     rotatingWord.style.transform = `rotate(${Math.sin(Date.now() / 1000) * 2}deg)`;
                 }, 50);
 
+                // Inicialização do Owl Carousel
+                $(document).ready(function () {
+                    $('.conditions-carousel').owlCarousel({
+                        loop: true,
+                        margin: 20,
+                        nav: true,
+                        dots: false,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 2
+                            },
+                            1000: {
+                                items: 4
+                            }
+                        }
+                    });
+                });
 
             </script>
 

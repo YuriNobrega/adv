@@ -3994,3 +3994,126 @@ textarea.form-control {
         padding-top: 2rem !important;
     }
 }
+
+
+
+/* Estilos para o novo carrossel */
+.conditions-carousel-container {
+    padding: 30px 0;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.condition-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 1.1em;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.condition-card:hover {
+    transform: translateY(-5px);
+}
+
+.owl-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-nav button {
+    background: #007bff !important;
+    color: white !important;
+    margin: 0 10px;
+    padding: 8px 20px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.owl-nav button:hover {
+    background: #0056b3 !important;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .condition-card {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .owl-nav {
+        display: none;
+    }
+}
+
+/* Estilos atualizados para match com info-box */
+.conditions-carousel-container {
+    padding: 40px 0;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.condition-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #ffd700;
+    /* Borda amarela igual ao highlight */
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.condition-card .card-content {
+    width: 100%;
+    text-align: center;
+}
+
+.condition-card .highlight {
+    color: #2a2a2a;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+/* Efeitos hover compatíveis */
+.condition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Navegação estilizada igual aos botões existentes */
+.owl-nav button {
+    background: linear-gradient(45deg, #ffd700, #ffb700) !important;
+    border: none !important;
+    padding: 12px 25px !important;
+    border-radius: 30px;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .condition-card {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .condition-card .highlight {
+        font-size: 1em;
+    }
+}
